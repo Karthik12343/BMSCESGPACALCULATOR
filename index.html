@@ -1,0 +1,115 @@
+
+ <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="Yvm3dcfl1nK1aZwp4d82hlAg2K_paLAEzbNRGbfwEI4" />
+    <meta name="keywords" content="vtu,vtu result,vtu results,results,sem,1st semester,1st sem,marks,1 sem,vtu marks,cpga,sgpa,vtu cgpa,calculate,score,grade,calculator">
+    <meta name="description" content="Calculate your sgpa and cgpa of your vtu results quickly.">
+ 
+    <link rel="icon" href="icon2.jpg" sizes="32x32" />
+  
+    
+    <link rel="icon" href="icon2.jpg" sizes="192x192" />
+  
+    <link rel="apple-touch-icon-precomposed" href="icon2.jpg" />
+    <meta name="msapplication-TileImage" content="https://vtucgpa.com/wp-content/uploads/2019/03/vicon.png" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js" type="71fa8029905257472308755e-text/javascript"></script>
+    <link rel="stylesheet" href="" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="body.css">
+    <script src="sgpa.js" type="71fa8029905257472308755e-text/javascript"></script>
+    <title>BMSCE CGPA CALCULATOR - 1ST YEAR</title>
+    <script data-ad-client="ca-pub-7241149652551443" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="71fa8029905257472308755e-text/javascript"></script>
+    </head>
+    <div ng-app="CalculatorApp" ng-controller="CalculatorController" style="
+        display: block;
+        width: 100%;
+    ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" href="/">
+      <img src="icon2.jpg" alt="" style="width: 150px; height: 150px;">
+      
+    </a>
+
+
+    
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <right>
+        
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      
+  
+   
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <div>CHECK YOUR CGPA NOW !!</div>
+   
+    
+    </div>
+    </li>
+
+    </div>
+    </div></right>
+    </nav>
+    <div class="branchSelect">
+   
+    <h2>I YEAR</h1>
+    </br>
+    <label><strong><ul> YOUR CYCLE : </ul></strong> </label><select name="users" ng-options="user.name for user in arrlist" ng-change="getdetails()" ng-model="userselected">
+    <option value=""><strong><ul>--SELECT CYCLE--</ul></strong></option>
+    </select>
+    </div>
+    <div class="body">
+    <form>
+    <div ng-show='chemistry'>
+        <label><b>ENGINEERING MATHS 1 : </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub1"><button class="inputsidebar">/100</button></br>
+        <label><b>ENGINEERING CHEMISTRY : </b>  </label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub2"><button class="inputsidebar">/100</button></br>
+        <label><b>ELEMENTS OF ELECTRICAL ENGINEERING: </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub3"><button class="inputsidebar">/100</button></br>
+        <label><b>ENGINEERING MECHANICS: </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub4"><button class="inputsidebar">/100</button></br>
+        <label><b>ELEMENTS OF ENGINEERING DRAWING: </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub5"><button class="inputsidebar">/100</button></br>
+        <label><b>FUNCTIONAL ENGLISH : </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub6"><button class="inputsidebar"> /50</button></br>
+        
+    <input type="reset" value="Reset">
+    <button onclick="if (!window.__cfRLUnblockHandlers) return false; myFunction()" class="download" data-cf-modified-71fa8029905257472308755e-="">DOWNLOAD</button>
+    <script type="71fa8029905257472308755e-text/javascript">
+    function myFunction() {
+      window.print();
+    }
+    </script></div>
+    <div ng-show='physics'>
+        <label><b>ENGINEERING MATHEMATICS 2 : </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub1"><button class="inputsidebar">/100</button></br>
+        <label><b>ENGINEERING PHYSICS : </b> </label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub2"><button class="inputsidebar">/100</button></br>
+        <label><b>C PROGRAMMING : </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub3"><button class="inputsidebar">/100</button></br>
+        <label><b>ELEMENTS OF MECHANICAL ENGINEERING : </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub4"><button class="inputsidebar">/100</button></br>
+        <label><b>ELEMENTS OF ELECTRONICS ENGINEERING : </b> </label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub5"><button class="inputsidebar">/100</button></br>
+        <label><b>KANNADA LANGUAGE : </b></label><input type="number" min="0" max="100" placeholder="Marks" ng-model="sub6"><button class="inputsidebar">  /50</button></br>
+    <input type="reset" value="Reset">
+    <button onclick="if (!window.__cfRLUnblockHandlers) return false; myFunction()" class="download" data-cf-modified-71fa8029905257472308755e-="">DOWNLOAD</button>
+    
+    <script type="71fa8029905257472308755e-text/javascript">
+    function myFunction() {
+      window.print();
+    }
+    
+    </script>
+    </div>
+    
+    
+    <label class="sgpa">SGPA: {{ result() }}</label>
+    </div> <div class="sidebar">
+    </div></div>
+   
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135018570-1" type="71fa8029905257472308755e-text/javascript"></script>
+    <script type="71fa8029905257472308755e-text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-135018570-1');
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="71fa8029905257472308755e-text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="71fa8029905257472308755e-text/javascript"></script>
+    </footer><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="71fa8029905257472308755e-|49" defer=""></script>
